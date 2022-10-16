@@ -1,9 +1,9 @@
 def tax_8(price)
-  (price * 0.08).to_i
+  price * 108 / 100 - price
 end
 
 def tax_10(price)
-  (price * 0.1).to_i
+  price * 110 / 100 - price
 end
 
 
