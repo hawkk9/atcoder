@@ -11,17 +11,11 @@ end
 
 def decimal_to_nonary(n)
   nonary = ''
-  20.downto(0) do |i|
-    base = 9 ** i
-    if base <= n
-      count = n / base
-      n -= base * count
-      nonary = nonary + count.to_s
-    else
-      nonary = nonary + '0'
-    end
+  while n != 0 do
+    nonary = (n % 9).to_s + nonary
+    n /= 9
   end
-  nonary.to_i
+  nonary
 end
 
 n, k = gets.chomp.split.map(&:to_i)
