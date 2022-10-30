@@ -1,5 +1,5 @@
 def get_size(i)
-  i != N ? A[i] : A[0]
+  i < N ? A[i] : A[i - N]
 end
 
 N = gets.chomp.to_i
